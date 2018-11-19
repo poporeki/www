@@ -1,0 +1,147 @@
+extends ./layer/header
+
+block lkstyle
+  link(rel='stylesheet', href='/css/reg.css')
+block title
+  title #{pageTitle}
+block content
+  body
+    .header
+      .logo-con
+        a.head-logo(href="/")
+        |             
+        p.logo-text 欢迎注册
+        |             
+        .header-login
+          p 已有账号？
+          |                 
+          a.login(href="/login") 请登录
+    |     
+    .content
+      .container
+        .section-left
+          form.reg(action="reg")
+            .form-item
+              .item-input
+                lable(for="reg_name") 用 户 名
+                |                             
+                input#reg_name(type="text", placeholder="您的帐户名和登陆名", data-checked='false', data-default='<i class="img i-def"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符')
+                |                             
+                i.i-status
+              |                         
+              .input-tips
+                span.text-block
+            |                     
+            .form-item
+              .item-input
+                lable(for="reg_pwd") 设置密码
+                |                             
+                input#reg_pwd(type="password", placeholder="建议至少使用两种字符组合", data-checked='false', data-default='<i class="img i-def"></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符')
+                |                             
+                i.i-status
+              |                         
+              .input-tips
+                span.text-block
+            |                     
+            .form-item
+              .item-input
+                lable(for="reg_pwdAgain") 确认密码
+                |                             
+                input#reg_pwdAgain(type="password", placeholder="请再次输入密码", data-checked='false', data-default='<i class="img i-def"></i>请再次输入密码')
+                |                             
+                i.i-status
+              |                         
+              .input-tips
+                span.text-block
+            |                     
+            .form-item
+              .item-input
+                lable(for="reg_tel") 手机号码
+                |                             
+                input#reg_tel(type="text", placeholder="建议使用常用手机", data-checked='false', data-default='<i class="img i-def"></i>验证完成后你可以用该手机登陆和找回密码')
+                |                             
+                i.i-status
+              |                         
+              .input-tips
+                span.text-block
+            |                     
+            .form-item.captcha
+              .item-input
+                lable(for="reg_code") 验证码
+                |                             
+                input#reg_code(type="text",maxlength="5", placeholder="输入验证码", data-checked='false', data-default='<i class="img i-def"></i>看不清？点击图片更换验证码')
+                |         
+                img(src=drawCap, alt="aa")                    
+                i.i-status
+              |                         
+              .input-tips
+                span.text-block
+                  
+            |                     
+            .form-item.agree-and-read
+              input(type="checkbox")
+              |                         
+              span
+                | 同意并阅读
+                a(href="##") 《京东用户注册协议》
+                |                         
+                a(href="##") 《隐私政策》
+            |                     
+            .form-item
+              button#btn_reg.btn-reg 立即注册
+        |             
+        .section-right
+          .form-company
+            .company-reg
+              i.cpy-icon.i-reg
+              |                         
+              a(href="##") 企业用户注册
+            |                     
+            .inter-cust
+              i.cpy-icon.i-cus
+              |                         
+              a(href="##")
+                p INTERNATION
+                |                             
+                p CUSTOMERS
+    |     
+    .footer
+      .lk
+        a(href="##") 关于我们
+        |             |
+        |             
+        a(href="##") 联系我们
+        |             |
+        |             
+        a(href="##") 人才招聘
+        |             |
+        |             
+        a(href="##") 商家入驻
+        |             |
+        |             
+        a(href="##") 广告服务
+        |             |
+        |             
+        a(href="##") 手机京东
+        |             |
+        |             
+        a(href="##") 友情链接
+        |             |
+        |             
+        a(href="##") 销售联盟
+        |             |
+        |             
+        a(href="##") 京东社区
+        |             |
+        |             
+        a(href="##") 京东公益
+        |             |
+        |             
+        a(href="##") English Site
+      |         
+      .copyright
+        span Copyright©2004-2016  京东JD.com 版权所有
+block scripts
+  script(src='https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js')
+  script(src='/js/requestAjax.js')
+  script(src="/js/reg.js")

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <div class='navbar-fixed-container'>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container navbar-fixed-container">
+               
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/WB_logo.png" alt="WB_logo">
+                    </a>
+                </div>
+
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="navbar-form navbar-left">
+                        <div class="form-group">
+                                <i class="iconfont icon-search"></i>
+                            <input type="text" class="form-control search-input" placeholder="大家正在搜：读书和没读书的差别">
+                            
+                            <div class="dropdown">
+                                <a href="##" class="see-all">查看完整热搜榜»</a>
+                                <ul>
+                                    <%for(var i=0;i<9;i++){%>
+                                        <li>
+                                            <a href="##">
+                                                <%if(i===0){%>
+                                                    <i class="tips-num red"><%=i+1 %></i>文本<%=i %>
+                                                <%}else if(i===1){%>
+                                                    <i class="tips-num orange">1</i>文本<%=i %>
+                                                <%}else{%>
+                                                    <i class="tips-num"><%=i+1 %></i>文本<%=i %>
+                                                <%}%>
+                                            </a>
+                                        </li>
+                                    <%}%>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-home"></i>主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-video"></i>视频</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-compass"></i>发现</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-game_icon"></i>游戏</a>
+                        </li>
+                        <li class="regAndLog">
+                            <a href="#" class="reg-lk">注册</a>
+                            |
+                            <a href="#" class="log-lk">登录</a>
+
+                        </li>
+                    </ul>
+                </div>
+         
+            </div>
+   
+        </nav>
+    </div>
+    <!-- navbar end -->
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <!-- nav-left start -->
+                <div class="col-md-1 col-sm-2 col-xs-2">
+                    <ul class="nav nav-stacked text-center left-nav" id="left-nav" data-spy="affix" data-offset-top="70">
+                        <% for(var i=0;i<navLeftDatas.length;i++) {%>
+                            <li>
+                                <% if(i===0){%>
+                                    <a href=navLeftDatas[i].link class="active">
+                                        <%=navLeftDatas[i].title %>
+                                    </a>
+                                <%}else{%>
+                                    <a href=navLeftDatas[i].link>
+                                        <%=navLeftDatas[i].title %>
+                                    </a>
+                                <%}%>
+                            </li>
+                        <%}%>
+                    </ul>
+                </div>
+                <!-- nav-left end -->
+                <div class="col-md-7 col-sm-10  col-xs-10">
+                    <div class="center-content">
+                        <!-- carousel start -->
+                        <div id="carousel-example-generic" class="carousel slide" role="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="./img/b1.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p>美国商务部：对中兴的禁令目前无扭转余地和协商空间</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/b2.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p>美国商务部：对中兴的禁令目前无扭转余地和协商空间</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./img/b2.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p>美国商务部：对中兴的禁令目前无扭转余地和协商空间</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- carousel end -->
+                        <div class="alert alert-warning alert-dismissible fade in text-center" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <a href="##" class="text-danger">您有未读内容，点击查看</a>
+                        </div>
+                        <!-- 内容列表 -->
+                        <div class="article-block">
+                                <div class="panel panel-default panel-video">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img class="video" src="./img/video_exp.png">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text">【2分钟肩膀变薄教程】气质好不好全看肩背了，肩不好看再瘦也白搭，今天教大家一套风靡中国的肩膀变薄全教程！科学的地教你最快速矫正自己的肩部！ 功效：快速瘦上斜方肌／拉长脖子／挺拔</p>
+                                                <a href='##' class="info">
+                                                    <ul class="clearfix">
+                                                        <li>
+                                                            <span class="face">
+                                                                <img src="./img/face.jpg" alt="">
+                                                            </span>
+                                                            <span class="name">全球健身中心</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="source-time">4月23日 22:01</span>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                                <div class="footer">
+                                                    <ul class="footer-list clearfix">
+                                                        <li>
+                                                            <a href="http://">
+                                                                <i class="iconfont icon-share"></i>11111</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://">
+                                                                <i class="iconfont icon-share"></i>11111</a>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://">
+                                                                <i class="iconfont icon-share"></i>11111</a>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-normal">
+                                    <div class="panel-body">
+                                        <div class="media ">
+                                            <div class="media-left media-middle">
+                                                <a href="#">
+                                                    <img class="media-object" src="./img/pic_exp.png" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">【工信部：确保取消流量“漫游”费7月1日如期兑现】在国新办25日召开的发布会上， 工信部信息通信发展司司长闻库说，取消流量“漫游”费目前进展到套餐梳理、规则调整、系统开发和改造阶段，确保7月1日如期兑现。此外，还将加快不限量或大流量资费方案推广力度、开展流量套餐扩容降费等。在中小企业宽
+                                                    ​​​​...</p>
+                                                <div class="function">
+                                                    <a href='##' class="info">
+                                                        <ul class="clearfix">
+                                                            <li>
+                                                                <span class="face">
+                                                                    <img src="./img/face.jpg" alt="">
+                                                                </span>
+                                                                <span class="name">全球健身中心</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="source-time">4月23日 22:01</span>
+                                                            </li>
+                                                        </ul>
+                                                    </a>
+                                                    <div class="footer">
+                                                        <ul class="footer-list clearfix">
+                                                            <li>
+                                                                <a href="http://">
+                                                                    <i class="iconfont icon-share"></i>11111</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://">
+                                                                    <i class="iconfont icon-share"></i>11111</a>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://">
+                                                                    <i class="iconfont icon-share"></i>11111</a>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel panel-default panel-pic">
+                                    <div class="panel-body">
+                                        <p class="text">【震撼！看海军阅兵方阵 堪比PS的视觉效果</p>
+                                        <a href="##" class="img-box">
+                                            <div class="row">
+                                                <div class="col-md-3 col-xs-3">
+                                                    <div class="pic-wrap">
+                                                        <img src="./img/pic.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <div class="pic-wrap">
+                                                        <img src="./img/pic.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <div class="pic-wrap">
+                                                        <img src="./img/pic.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <div class="pic-wrap">
+                                                        <img src="./img/pic.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                        </a>
+                                        <div class="function">
+                                            <a href='##' class="info">
+                                                <ul class="clearfix">
+                                                    <li>
+                                                        <span class="face">
+                                                            <img src="./img/face.jpg" alt="">
+                                                        </span>
+                                                        <span class="name">全球健身中心</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="source-time">4月23日 22:01</span>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                            <div class="footer">
+                                                <ul class="footer-list clearfix">
+                                                    <li>
+                                                        <a href="http://">
+                                                            <i class="iconfont icon-share"></i>11111</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://">
+                                                            <i class="iconfont icon-share"></i>11111</a>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://">
+                                                            <i class="iconfont icon-share"></i>11111</a>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        a
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-4 hidden-sm hidden-xs">
+                    <div class="login-box">
+                        <div>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs text-center" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#normal_login" aria-controls="home" role="tab" data-toggle="tab">账号登录</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#qr_login" aria-controls="profile" role="tab" data-toggle="tab">安全登录</a>
+                                </li>
+
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active normal-login" id="normal_login">
+                                    <form action="/login">
+                                        <div class="form-group">
+                                            <i class="iconfont icon-head"></i>
+                                            <input type="text" placeholder="邮箱/会员帐号/手机号" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <i class="iconfont icon-lock"></i>
+                                            <input type="text" placeholder="请输入密码" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="checkbox ">
+                                                <label>
+                                                    <input type="checkbox" value="remember"> 记住我
+
+                                                </label>
+                                                <a href="##" class="pull-right">忘记密码</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="##" class="btn btn-danger btn-block">登录</a>
+                                        </div>
+
+                                    </form>
+                                    <p>还没有微博？
+                                        <a href="##" class="reg-lk">立即注册!</a>
+                                    </p>
+                                    <hr>
+                                    <div class="other-lks">其他登录：
+                                        <a href="##">
+                                            <i class="iconfont icon-taobao2"></i>
+                                        </a>
+                                        <a href="##">
+                                            <i class="iconfont icon-yidong"></i>
+                                        </a>
+                                        <a href="##">
+                                            <i class="iconfont icon-baidu"></i>
+                                        </a>
+                                        <a href="##">
+                                            <i class="iconfont icon-liantonglogo"></i>
+                                        </a>
+                                        <a href="##">
+                                            <i class="iconfont icon-qq"></i>
+                                        </a>
+                                        <a href="##">
+                                            <i class="iconfont icon-msnui-360"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade qr-login" id="qr_login">
+                                    <div class="qr-box">
+                                        <div class="img-box">
+                                            <img src="./img/qr.png" alt="">
+                                        </div>
+                                        <p>请打开微博客户端扫一扫</p>
+                                    </div>
+                                    <p>还没有微博？
+                                        <a href="##" class="reg-lk">立即注册!</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="news-box right-item">
+                        <h4 class="title">微博新鲜事</h4>
+                        <ul class="news-list">
+                            <%for(var i=0;i<6;i++){%>
+                                <li>
+                                    <a href="##">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <p class="text"><%=i%>致敬劳动者 | 奋斗的人生最幸福</p>
+                                                <span class="time">13分钟前</span>
+                                            </div>
+                                            <div class="media-right">
+                                                <img class="media-object" src="./img/news_exp.png" alt="...">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <%}%>
+                        </ul>
+                        <a href="##" class="more">查看更多</a>
+                    </div>
+                    <div class="hot-box  right-item">
+                        <h4 class="title">微博实时热点</h4>
+                        <ul class="hot-list">
+                            <%for(var i=0;i<6;i++){%>
+                                <li>
+                                    <a href="##">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img class="media-object" src="./img/hot_exp.png" alt="...">
+                                            </div>
+                                            <div class="media-body">
+                                                <h3 class="title"><%=i%>这签名该不会是邓超的吧</h3>
+                                                <p class="text">彭于晏 打假小王几 这签名该不会是邓超的吧[偷笑]？哈哈哈，老公真的很严格呀[笑cry]，不过就算签名是假，能得到本尊回复也是意外之喜！ ​​​​</p>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <%}%>
+                        </ul>
+                        <a href="##" class="more">查看更多</a>
+                    </div>
+                    <div class="find-box right-item">
+                        <h4 class="title">微博找人</h4>
+                        <div class="tag-list">
+                            <h4 class="title">名人</h4>
+                            <ul class="clearfix">
+                                <% for(var i=0;i<5;i++) {%>
+                                    <li>
+                                        <a href="##">
+                                            <i class="iconfont icon-star"></i>
+                                            <span>明星<%=i%></span>
+                                        </a>
+                                    </li>
+                                    <%}%>
+                            </ul>
+                        </div>
+                        <div class="tag-list">
+                            <h4 class="title">名人</h4>
+                            <ul class="clearfix">
+                                <% for(var i=0;i<15;i++) {%>
+                                    <li>
+                                        <a href="##">
+                                            <i class="iconfont icon-star"></i>
+                                            <span>明星</span>
+                                        </a>
+                                    </li>
+                                    <%}%>
+                            </ul>
+                        </div>
+                        <div class="tag-list">
+                            <h4 class="title">名人</h4>
+                            <ul class="clearfix">
+                                <% for(var i=0;i<20;i++) {%>
+                                    <li>
+                                        <a href="##">
+                                            <i class="iconfont icon-star"></i>
+                                            <span>明星</span>
+                                        </a>
+                                    </li>
+                                <%}%>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

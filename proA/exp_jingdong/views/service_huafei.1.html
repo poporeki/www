@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--if lt IE 9
+  script(src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js')
+  script(src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js')
+  -->
+    <link rel="stylesheet" href="../public/css/default.css">
+    <link rel="stylesheet" href="../public/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../public/images/index/banner/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/huafei.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="tab-iframe tab-panel">
+        <div class="tab-item-selected tab-head-item"><a href="##">话费充值</a></div>
+        <div class="tab-item-selected tab-head-item"><a href="##">流量充值</a></div>
+        <div class="tab-item-selected tab-head-item"><a href="##">套餐变更</a></div>
+    </div>
+    <div class="tab-iframe-content tab-content-panel">
+        <div class="tab-content-item">
+            <dl class="cols">
+                <dt>
+                    <p>1号码</p>
+                </dt>
+                <dd>
+                    <input id="phone_number" type="text" placeholder="移动/联通/电信" class="input-phonenum">
+                </dd>
+            </dl>
+            <dl class="cols">
+                <dt>
+                    <p>面值</p>
+                </dt>
+                <dd>
+                    <select id="select_price_money" class="select-price-money">
+            <option value="10">10元</option>
+            <option value="20">20元</option>
+            <option value="30">30元</option>
+            <option value="40">40元</option>
+            <option value="50" selected="selected">50元</option>
+            <option value="100">100元</option>
+          </select>
+                </dd>
+                <dd><span id="priceRecharge" class="msg-price">￥98.0-￥100.0</span></dd>
+            </dl>
+            <dl class="cols">
+                <button class="btn-submit">快速充值</button>
+            </dl>
+            <dl class="cols"><a href="##" class="link-ad"><i></i> 抢8元话费券</a></dl>
+        </div>
+        <div class="tab-content-item">
+            <dl class="cols">
+                <dt>
+                    <p>2号码</p>
+                </dt>
+                <dd>
+                    <input id="phone_number" type="text" placeholder="移动/联通/电信" class="input-phonenum">
+                </dd>
+            </dl>
+            <dl class="cols">
+                <dt>
+                    <p>面值</p>
+                </dt>
+                <dd>
+                    <select id="select_price_money" class="select-price-money">
+            <option value="10">10元</option>
+            <option value="20">20元</option>
+            <option value="30">30元</option>
+            <option value="40">40元</option>
+            <option value="50" selected="selected">50元</option>
+            <option value="100">100元</option>
+          </select>
+                </dd>
+                <dd><span id="priceRecharge" class="msg-price">￥98.0-￥100.0</span></dd>
+            </dl>
+        </div>
+        <div class="tab-content-item">
+            <dl class="cols">
+                <dt>
+                    <p>3号码</p>
+                </dt>
+                <dd>
+                    <input id="phone_number" type="text" placeholder="移动/联通/电信" class="input-phonenum">
+                </dd>
+            </dl>
+            <dl class="cols">
+                <dt>
+                    <p>面值</p>
+                </dt>
+                <dd>
+                    <select id="select_price_money" class="select-price-money">
+            <option value="10">10元</option>
+            <option value="20">20元</option>
+            <option value="30">30元</option>
+            <option value="40">40元</option>
+            <option value="50" selected="selected">50元</option>
+            <option value="100">100元</option>
+          </select>
+                </dd>
+                <dd><span id="priceRecharge" class="msg-price">￥98.0-￥100.0</span></dd>
+            </dl>
+        </div>
+    </div>
+</body>
+<script src="../public/js/jquery-1.9.1.js"></script>
+<script src="../public/js/jquery.mytabs-0.1.js"></script>
+<script src="../public/js/jquery.days-0.1.js"></script>
+<script>
+    $('body').anitabs();
+
+</script>

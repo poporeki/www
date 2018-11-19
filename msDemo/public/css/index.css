@@ -1,0 +1,425 @@
+body {
+  min-width: 1190px;
+  font-size: 14px;
+}
+header {
+  height: 50px;
+  padding: 0 30px;
+  border-bottom: 1px solid #d8d8d8;
+  border-radius: 0 0 5px #d8d8d8;
+  z-index: 99;
+  margin: 0 auto;
+}
+header a.logo {
+  padding: 20px;
+}
+header a.logo img {
+  display: inline-block;
+  max-height: 23px;
+}
+header nav {
+  position: relative;
+  height: 100%;
+  line-height: 50px;
+  display: inline-block;
+  z-index: 99;
+}
+header nav .fa-angle-right {
+  float: right;
+  line-height: 50px;
+}
+header nav .menu-1 {
+  width: 100%;
+}
+header nav .menu-1 li {
+  position: relative;
+  display: inline-block;
+}
+header nav .menu-1 li .menu-2,
+header nav .menu-1 li .menu-3 {
+  display: none;
+}
+header nav .menu-1 .btn {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 20px;
+  transition: background-color 0.5s;
+}
+header nav .menu-1 .btn:hover {
+  background-color: #d8d8d8;
+}
+header nav .menu-1 li:hover .menu-2 {
+  display: block;
+}
+header nav .menu-1 li:hover .menu-2 li:hover .menu-3 {
+  display: block;
+}
+header nav .menu-2 {
+  position: absolute;
+  display: none;
+  top: 50px;
+  width: 190px;
+  background-color: #f2f2f2;
+}
+header nav .menu-2 .btn {
+  width: 150px;
+  line-height: 50px;
+}
+header nav .menu-3 {
+  position: absolute;
+  display: none;
+  background-color: #e5e5e5;
+  left: 190px;
+  top: 0;
+}
+header nav .menu-3 .btn {
+  display: inline-block;
+  width: 300px;
+}
+header nav .menu-3 .btn:hover {
+  background-color: #d8d8d8;
+}
+header .header-right {
+  float: right;
+  margin-right: 10px;
+}
+header .search-box {
+  position: relative;
+  float: left;
+  line-height: 50px;
+  margin-right: 10px;
+}
+header .search-box input {
+  position: relative;
+  width: 224px;
+  height: 36px;
+  border: 1px solid #A9A9A9;
+  padding-left: 5px;
+  padding-right: 36px;
+}
+header .search-box .search-btn {
+  display: inline-block;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  right: 0;
+}
+header .header-cart,
+header .user-login {
+  display: block;
+  float: left;
+  top: 0;
+  line-height: 50px;
+  padding: 0 20px;
+  transition: background-color 0.5s ease;
+}
+header .header-cart:hover,
+header .user-login:hover {
+  background-color: #d8d8d8;
+}
+/*banner首页初始化*/
+@keyframes itemin {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*进入 文字动画*/
+@keyframes textin {
+  0% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+section {
+  position: relative;
+  width: 1190px;
+  margin: 0 auto;
+}
+section > h2 {
+  font-size: 40px;
+  font-weight: lighter;
+  padding: 20px 0;
+  margin-left: 20px;
+}
+section .banner {
+  position: relative;
+}
+section .banner .list-item {
+  display: none;
+}
+section .banner .item-lk {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*轮播 文字部分*/
+}
+section .banner .item-lk .text-block {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  animation: textin 1s;
+}
+section .banner .item-lk .text-block .lk-block {
+  margin-top: 50px;
+}
+section .banner .item-lk .text-block .text-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+section .banner .item-lk .text-block .text-btn:hover {
+  opacity: .8;
+}
+section .banner .item-lk .text-block .item-tit {
+  font-size: 40px;
+  font-weight: lighter;
+}
+section .banner .item-lk .white .item-tit {
+  color: #fff;
+}
+section .banner .item-lk .white .item-text {
+  color: #fff;
+}
+section .banner .item-lk .white .lk-block .text-btn {
+  color: #000;
+  background-color: #fff;
+}
+section .banner .item-lk .black .item-tit {
+  color: #000;
+}
+section .banner .item-lk .black .item-text {
+  color: #000;
+}
+section .banner .item-lk .black .lk-block .text-btn {
+  color: #fff;
+  background-color: #000;
+}
+section .banner .item-lk .item-img {
+  width: 100%;
+  height: 100%;
+  min-width: 1024px;
+}
+section .banner .tips {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: 10px;
+}
+section .banner .tips .tips-btn {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+section .banner .tips .tips-btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+section .banner .tips .clicked {
+  background-color: #000;
+}
+section .banner .controls-block {
+  height: 100%;
+}
+section .banner .controls-block .btn {
+  position: absolute;
+  display: none;
+  top: 50%;
+  margin-top: -50px;
+  padding: 20px 10px;
+  background-color: #000;
+  color: #fff;
+}
+section .banner .controls-block .prev {
+  left: 0;
+}
+section .banner .controls-block .next {
+  right: 0;
+}
+section .banner:hover .controls-block > .btn {
+  display: block;
+}
+section .banner .pause-block {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  margin-bottom: 20px;
+}
+section .banner .pause-block a {
+  display: inline-block;
+  padding: 0 20px;
+  margin-right: 10px;
+}
+section .banner .pause-block .pause-btn {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+}
+section .banner .pause-block .play-btn {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+section .c-list-wrap {
+  margin-top: 30px;
+}
+section .c-list-wrap ul.c-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section .c-list-wrap ul.c-list li.list-item {
+  float: left;
+  width: 25%;
+}
+section .c-list-wrap ul.c-list li.list-item > a {
+  display: block;
+  margin: 10px;
+}
+section .c-list-wrap ul.c-list li.list-item > a > span {
+  color: #0078D7;
+}
+section .c-list-wrap ul.c-list li.list-item > a:hover > span {
+  text-decoration: underline;
+}
+section .c-list-wrap ul.c-list li.list-item .item-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+section .c-list-wrap ul.c-list li.list-item img {
+  width: 100%;
+}
+section .c-list-wrap ul.c-list li.list-item .text-head {
+  font-size: 24px;
+}
+section .m-store {
+  position: relative;
+  margin: 20px 0;
+}
+section .m-store > img {
+  width: 100%;
+}
+section .m-store .text-block {
+  position: absolute;
+  display: block;
+  top: 40%;
+  width: 80%;
+  margin-left: 10%;
+  color: #fff;
+}
+section .m-store .text-block .text-head {
+  font-size: 34px;
+  line-height: 40px;
+  padding: 10px 0;
+}
+section .m-store .text-block .store-lk {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 50px;
+  color: #000;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+footer {
+  position: relative;
+  background-color: #ccc;
+}
+footer .social-block {
+  width: 1190px;
+  margin: 0 auto;
+}
+footer .social-block span.text-tit {
+  font-size: 18px;
+  padding: 5px 0;
+  margin-right: 0 20px;
+  line-height: 50px;
+}
+footer .social-block a.lk {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  top: 9px;
+}
+footer .social-block a.lk:hover > img {
+  display: block;
+}
+footer .social-block a.lk:hover:after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+}
+footer .social-block a.lk img {
+  display: none;
+  position: absolute;
+  width: 200%;
+  top: 40px;
+  left: -50%;
+}
+footer .social-block a.wechat {
+  background: url('../images/wechat_s.png') no-repeat;
+}
+footer .social-block a.weibo {
+  background: url('../images/weibo_s.png') no-repeat;
+}
+footer .bottom-block {
+  background-color: #F2F2F2;
+}
+footer .bottom-block .inner {
+  position: relative;
+  width: 1190px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+footer .bottom-block .row {
+  display: inline-block;
+  vertical-align: top;
+  width: 16%;
+}
+footer .bottom-block .row .title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 10px 15px 0 0;
+}
+footer .bottom-block .row ul.menu-list li.list-item {
+  padding: 5px 0;
+}
+footer .bottom-block .row ul.menu-list li.list-item a.item-lk:hover {
+  text-decoration: underline;
+}
+footer .bottom-block .another {
+  margin-top: 50px;
+}
+footer .bottom-block .another a:hover {
+  text-decoration: underline;
+}
+footer .bottom-block .change-languages {
+  float: left;
+}
+footer .bottom-block .copyright {
+  position: relative;
+  float: right;
+}
+footer .bottom-block .copyright li {
+  float: left;
+  margin-left: 20px;
+}
+footer .bottom-block .end {
+  position: absolute;
+  color: #666;
+  right: 0;
+}

@@ -1,0 +1,20 @@
+.page-item:nth-child(1) {
+	transform: translateX(-100vw);
+}
+
+.page-item:nth-child(2) .page-title {
+	transform: scale(.8);
+}
+
+.page-item:nth-child(2) .page-content {
+	transform: translateX(100vw);
+}
+
+#my_info .list-group .list-group-item {
+	transition: transform .5s ease-out,background-color .5s;
+}
+
+#my_info .list-group .list-group-item:hover {
+	transform: scale(1.05);
+	background-color: #e8e8e8;
+}
